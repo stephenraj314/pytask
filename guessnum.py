@@ -4,7 +4,6 @@ def getdata():
     return list( int(x) for x in input("Enter Your Guess for Four Digit Number : "))
 j=0
 comp=list(ran.randint(0,9) for x in range(4))
-print(comp)
 dup=comp.copy()
 user=getdata()
 flag=['X','X','X','X']
@@ -29,10 +28,9 @@ while loop:
             continue        
     print(*user)    
     print(*flag)
-    for x in flag:
-        if all(ele == 'C' for ele in flag):
-            loop=False
-            break
+    if all(ele == 'C' for ele in flag):
+        loop=False
+        break
     else:
         user =getdata()
         dup=comp.copy()
