@@ -6,9 +6,8 @@ j=0
 comp=list(ran.randint(0,9) for x in range(4))
 dup=comp.copy()
 user=getdata()
-flag=['X','X','X','X']
-loop=True    
-while loop:  
+flag=['X','X','X','X']   
+while True:  
     i=0
     while i<4:
         if comp[i] == user[i]:
@@ -29,7 +28,6 @@ while loop:
     print(*user)    
     print(*flag)
     if all(ele == 'C' for ele in flag):
-        loop=False
         break
     else:
         user =getdata()
